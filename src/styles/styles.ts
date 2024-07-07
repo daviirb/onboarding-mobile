@@ -11,6 +11,14 @@ export function useDynamicStyles() {
       alignItems: "center",
       backgroundColor: theme.background,
     },
+    primaruButton: {
+      width: 166,
+      borderRadius: 8,
+      paddingHorizontal: 22,
+      paddingVertical: 12,
+      backgroundColor: theme.primary,
+      gap: 10,
+    },
     titleLarge: {
       fontSize: 32,
       color: theme.text,
@@ -35,6 +43,13 @@ export function useDynamicStyles() {
       fontSize: 14,
       color: theme.textTertiary,
       lineHeight: 16.94,
+      fontWeight: "500",
+      textAlign: "center",
+    },
+    buttonText: {
+      fontSize: 15,
+      color: theme.text,
+      lineHeight: 24,
       fontWeight: "500",
       textAlign: "center",
     },
