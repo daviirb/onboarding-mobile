@@ -1,4 +1,6 @@
-const palette = {
+import { Palette, Theme } from "./themeTypes";
+
+export const palette: Palette = {
   magenta: "#6759FF",
   white: "#FFFFFF",
   gray: "#EFEFEF",
@@ -13,10 +15,13 @@ const palette = {
   darkBlue5: "#2C2B46",
   darkBlue6: "#29303C",
 
+  pink: "#FFCACA",
+  lightBlue: "#CAD2FF",
+
   green: "#B5EBCD",
 };
 
-const lightTheme = {
+export const lightTheme: Theme = {
   ...palette,
 
   primary: palette.magenta,
@@ -28,11 +33,16 @@ const lightTheme = {
   buttonSecondary: palette.gray,
   buttonTertiary: palette.gray3,
 
+  background: palette.white,
+
   icon: palette.green,
   iconSecondary: palette.gray,
+
+  activeDot: palette.magenta,
+  inactiveDot: palette.magenta,
 };
 
-const darkTheme = {
+export const darkTheme: Theme = {
   ...palette,
 
   primary: palette.magenta,
@@ -44,8 +54,13 @@ const darkTheme = {
   buttonSecondary: palette.darkBlue4,
   buttonTertiary: palette.darkBlue6,
 
+  background: palette.darkBlue,
+
   icon: palette.green,
   iconSecondary: palette.darkBlue6,
+
+  activeDot: palette.magenta,
+  inactiveDot: palette.white,
 };
 
 export const colors = { palette, lightTheme, darkTheme };
