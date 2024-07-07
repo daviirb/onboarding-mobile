@@ -2,16 +2,17 @@ import { useDynamicStyles } from "@/styles/styles";
 import { TouchableOpacity, View } from "react-native";
 import { Text } from "../Text/Text";
 
-interface SkipButtonProps {
+interface PrimaryButtonProps {
+  text: string;
   onPress: () => void;
 }
 
-export function SkipButton({ onPress }: SkipButtonProps) {
-  const { skipButton } = useDynamicStyles();
+export function PrimaryButton({ text, onPress }: PrimaryButtonProps) {
+  const { primaruButton } = useDynamicStyles();
   return (
     <TouchableOpacity onPress={onPress}>
-      <View style={skipButton}>
-        <Text.Tertiary text="Skip" />
+      <View style={primaruButton}>
+        <Text.ButtonText text={text} />
       </View>
     </TouchableOpacity>
   );

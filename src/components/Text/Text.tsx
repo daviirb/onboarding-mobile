@@ -14,9 +14,13 @@ function Paragraph({ text }: TextProps) {
   const { paragraph } = useDynamicStyles();
   return <RText style={paragraph}>{text}</RText>;
 }
+function ButtonText({ text }: TextProps) {
+  const { buttonText } = useDynamicStyles();
+  return <RText style={buttonText}>{text}</RText>;
+}
 function Tertiary({ text }: TextProps) {
   const { paragraphSecondary } = useDynamicStyles();
   return <RText style={paragraphSecondary}>{text}</RText>;
 }
 
-export const Text = { TitleLarge, Paragraph, Tertiary };
+export const Text = { TitleLarge, Paragraph, Tertiary, ButtonText };

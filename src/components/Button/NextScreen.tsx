@@ -3,11 +3,11 @@ import { colors } from "@/theme/colors";
 import { AntDesign } from "@expo/vector-icons";
 import { TouchableOpacity, View } from "react-native";
 
-interface INextScreen {
+interface NextScreen {
   onPress: () => void;
 }
 
-export function NextScreen({ onPress }: INextScreen) {
+export function NextScreen({ onPress }: NextScreen) {
   const { roundedButton } = useDynamicStyles();
   return (
     <TouchableOpacity onPress={onPress}>
