@@ -12,7 +12,7 @@ function AppNavigator() {
   const { hasCompletedOnboarding, isLoading } = useOnboarding();
 
   if (isLoading) {
-    return null; // Ou um componente de carregamento
+    return null;
   }
 
   return (
