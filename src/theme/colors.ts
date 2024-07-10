@@ -14,6 +14,7 @@ export const palette: Palette = {
   darkBlue4: "#2F3643",
   darkBlue5: "#2C2B46",
   darkBlue6: "#29303C",
+  darkBlue7: "#18202E",
 
   pink: "#FFCACA",
   lightBlue: "#CAD2FF",
@@ -28,6 +29,9 @@ export const lightTheme: Theme = {
   text: palette.darkBlue2,
   textSecondary: palette.gray3,
   textTertiary: palette.darkBlue5,
+
+  inputText: palette.gray2,
+  placeholderTextColor: palette.gray4,
 
   buttonPrimary: palette.magenta,
   buttonSecondary: palette.gray,
@@ -49,6 +53,9 @@ export const darkTheme: Theme = {
   text: palette.white,
   textSecondary: palette.gray4,
   textTertiary: palette.darkBlue5,
+
+  inputText: palette.darkBlue7,
+  placeholderTextColor: palette.gray3,
 
   buttonPrimary: palette.magenta,
   buttonSecondary: palette.darkBlue4,

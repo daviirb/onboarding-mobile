@@ -12,6 +12,7 @@ export interface Palette {
   darkBlue4: string;
   darkBlue5: string;
   darkBlue6: string;
+  darkBlue7: string;
   green: string;
   pink: string;
 }
@@ -29,4 +30,6 @@ export interface Theme extends Palette {
   iconSecondary: string;
   activeDot: string;
   inactiveDot: string;
+  inputText: string;
+  placeholderTextColor: string;
 }

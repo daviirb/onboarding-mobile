@@ -11,12 +11,20 @@ export function useDynamicStyles() {
       alignItems: "center",
       backgroundColor: theme.background,
     },
-    primaruButton: {
+    primaryButton: {
       width: 166,
       borderRadius: 8,
       paddingHorizontal: 22,
       paddingVertical: 12,
       backgroundColor: theme.primary,
+      gap: 10,
+    },
+    secondaryButton: {
+      width: "100%",
+      borderRadius: 8,
+      paddingHorizontal: 22,
+      paddingVertical: 12,
+      backgroundColor: theme.buttonSecondary,
       gap: 10,
     },
     titleLarge: {
@@ -25,6 +33,12 @@ export function useDynamicStyles() {
       lineHeight: 41,
       fontWeight: "700",
       textAlign: "center",
+    },
+    title: {
+      fontSize: 32,
+      color: theme.text,
+      lineHeight: 48,
+      fontWeight: "600",
     },
     titleSmall: {
       fontSize: 32,
@@ -45,6 +59,20 @@ export function useDynamicStyles() {
       lineHeight: 16.94,
       fontWeight: "500",
       textAlign: "center",
+    },
+    paragraphTertiary: {
+      fontSize: 15,
+      color: theme.textSecondary,
+      lineHeight: 24,
+      fontWeight: "600",
+    },
+    inputText: {
+      width: "100%",
+      borderRadius: 8,
+      padding: 12,
+      gap: 10,
+      color: theme.placeholderTextColor,
+      backgroundColor: theme.inputText,
     },
     buttonText: {
       fontSize: 15,
