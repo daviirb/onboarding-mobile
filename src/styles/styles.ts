@@ -110,5 +110,8 @@ export function useDynamicStyles() {
     inactiveDot: {
       color: theme.inactiveDot,
     },
+    dynamicLogo: {
+      color: theme.dynamicLogo,
+    },
   });
 }

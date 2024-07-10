@@ -44,6 +44,8 @@ export const lightTheme: Theme = {
 
   activeDot: palette.magenta,
   inactiveDot: palette.magenta,
+
+  dynamicLogo: palette.magenta,
 };
 
 export const darkTheme: Theme = {
@@ -68,6 +70,8 @@ export const darkTheme: Theme = {
 
   activeDot: palette.magenta,
   inactiveDot: palette.white,
+
+  dynamicLogo: palette.white,
 };
 
 export const colors = { palette, lightTheme, darkTheme };

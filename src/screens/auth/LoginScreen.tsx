@@ -1,15 +1,16 @@
 import { SecondaryButton } from "@/components/Button/SecondaryButton";
 import { Input } from "@/components/Input/Input";
+import Logo from "@/components/logo";
 import { useDynamicStyles } from "@/styles/styles";
 import { Text, View } from "react-native";
 
 export function LoginScreen() {
+  const { dynamicLogo } = useDynamicStyles();
   const { container, title, paragraphTertiary } = useDynamicStyles();
   return (
     <View style={container}>
       <View>
-        <Text>LOGO</Text>
-        {/* Colocar Logo aqui */}
+        <Logo height={97} width={150} color={dynamicLogo.color} />
       </View>
       <View style={{ width: "100%", padding: 16, rowGap: 16 }}>
         <Text style={title}>Sign In</Text>

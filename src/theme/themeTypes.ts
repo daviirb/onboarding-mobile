@@ -32,4 +32,5 @@ export interface Theme extends Palette {
   inactiveDot: string;
   inputText: string;
   placeholderTextColor: string;
+  dynamicLogo: string;
 }
