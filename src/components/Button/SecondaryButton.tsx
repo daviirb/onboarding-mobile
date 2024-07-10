@@ -7,11 +7,11 @@ interface PrimaryButtonProps {
   onPress: () => void;
 }
 
-export function PrimaryButton({ text, onPress }: PrimaryButtonProps) {
-  const { primaryButton: primaruButton } = useDynamicStyles();
+export function SecondaryButton({ text, onPress }: PrimaryButtonProps) {
+  const { secondaryButton } = useDynamicStyles();
   return (
     <TouchableOpacity onPress={onPress}>
-      <View style={primaruButton}>
+      <View style={secondaryButton}>
         <Text.ButtonText text={text} />
       </View>
     </TouchableOpacity>
