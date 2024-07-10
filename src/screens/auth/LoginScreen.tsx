@@ -1,28 +1,46 @@
-import { StyleSheet, Text, View } from "react-native";
+import { SecondaryButton } from "@/components/Button/SecondaryButton";
+import { Input } from "@/components/Input/Input";
+import { useDynamicStyles } from "@/styles/styles";
+import { Text, View } from "react-native";
 
 export function LoginScreen() {
+  const { container, title, paragraphTertiary } = useDynamicStyles();
   return (
-    <View style={styles.container}>
+    <View style={container}>
       <View>
         <Text>LOGO</Text>
         {/* Colocar Logo aqui */}
       </View>
-      <View>
-        <Text>SIGNIN</Text>
+      <View style={{ width: "100%", padding: 16, rowGap: 16 }}>
+        <Text style={title}>Sign In</Text>
+        <View style={{ rowGap: 6 }}>
+          <Text style={paragraphTertiary}>Phone Number</Text>
+          <View style={{ rowGap: 20 }}>
+            <Input placeholder="Phone Number" />
+            <SecondaryButton onPress={() => {}} text="Sign In" />
+          </View>
+          <View style={{ paddingHorizontal: 40 }}>
+            <Text
+              style={[
+                paragraphTertiary,
+                { textAlign: "center", marginTop: 63 },
+              ]}
+            >
+              Sign in with
+            </Text>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text>Google</Text>
+              <Text>Facebook</Text>
+              <Text>Apple</Text>
+            </View>
+          </View>
+        </View>
       </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  button: {
-    padding: 10,
-    borderRadius: 5,
-    marginBottom: 10,
-  },
-});
