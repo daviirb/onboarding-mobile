@@ -9,7 +9,7 @@ import { useNavigation } from "@react-navigation/native";
 import { Image, View } from "react-native";
 
 export function OnboardingScreen1() {
-  const navigation = useNavigation<any>();
+  const navigation = useNavigation();
 
   return (
     <ViewContainer>
@@ -19,7 +19,7 @@ export function OnboardingScreen1() {
       <View style={{ position: "absolute", top: 147.37, left: 287.88 }}>
         <Circle color={colors.palette.lightBlue} size={16} />
       </View>
-      <View style={{ position: "absolute", top: 17.31, right: 8 }}>
+      <View style={{ position: "absolute", top: 17.31, right: 14 }}>
         <SkipButton onPress={() => navigation.navigate("OnboardingScreen3")} />
       </View>
       <View style={{ width: "100%" }}>

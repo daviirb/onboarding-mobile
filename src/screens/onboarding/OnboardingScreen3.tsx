@@ -3,16 +3,14 @@ import { Circle } from "@/components/Elipse/Elipse";
 import { PaginationDots } from "@/components/PaginationDots/PaginationDots";
 import { ViewContainer } from "@/components/Screen/ScreenContainer";
 import { Text } from "@/components/Text/Text";
+import { useOnboarding } from "@/contexts/AuthContext";
 import { colors } from "@/theme/colors";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
 import { Image, View } from "react-native";
 
 export function OnboardingScreen3() {
-  const navigation = useNavigation<any>();
-  function handleFinishOnboarding() {
-    navigation.navigate("LoginScreen");
-  }
-
+  const { completeOnboarding } = useOnboarding();
   return (
     <ViewContainer>
       <View style={{ position: "absolute", top: -40, left: -40 }}>
@@ -44,9 +42,24 @@ export function OnboardingScreen3() {
         </View>
         <PrimaryButton
           text="Get Started"
-          onPress={() => handleFinishOnboarding()}
+          onPress={async () => {
+            await completeOnboarding();
+            handleFinishOnboarding;
+          }}
         />
       </View>
     </ViewContainer>
   );
+}
+
+function handleFinishOnboarding() {
+  const navigation = useNavigation();
+  return async () => {
+    try {
+      await AsyncStorage.setItem("hasCompletedOnboarding", "true");
+      navigation.navigate("Auth");
+    } catch (error) {
+      console.error("Failed to save onboarding status", error);
+    }
+  };
 }
