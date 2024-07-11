@@ -5,6 +5,7 @@ export interface Palette {
   gray2: string;
   gray3: string;
   gray4: string;
+  gray5: string;
   lightBlue: string;
   darkBlue: string;
   darkBlue2: string;
@@ -13,8 +14,10 @@ export interface Palette {
   darkBlue5: string;
   darkBlue6: string;
   darkBlue7: string;
+  darkBlue8: string;
   green: string;
   pink: string;
+  black: string;
 }
 
 export interface Theme extends Palette {
@@ -33,4 +36,7 @@ export interface Theme extends Palette {
   inputText: string;
   placeholderTextColor: string;
   dynamicLogo: string;
+  dynamicIconBG: string;
+  dynamicIconBorder: string;
+  dynamicIconLogo: string;
 }

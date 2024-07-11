@@ -113,5 +113,10 @@ export function useDynamicStyles() {
     dynamicLogo: {
       color: theme.dynamicLogo,
     },
+    dynamicIcon: {
+      color: theme.dynamicIconBorder,
+      backgroundColor: theme.dynamicIconBG,
+      tintColor: theme.dynamicIconLogo,
+    },
   });
 }

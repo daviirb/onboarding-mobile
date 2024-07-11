@@ -7,6 +7,7 @@ export const palette: Palette = {
   gray2: "#F5F5F5",
   gray3: "#535763",
   gray4: "#D1D3D4",
+  gray5: "#FCFCFC",
 
   darkBlue: "#0F1621",
   darkBlue2: "#1A1D1F",
@@ -15,6 +16,9 @@ export const palette: Palette = {
   darkBlue5: "#2C2B46",
   darkBlue6: "#29303C",
   darkBlue7: "#18202E",
+  darkBlue8: "#535763",
+
+  black: "#000000",
 
   pink: "#FFCACA",
   lightBlue: "#CAD2FF",
@@ -46,6 +50,9 @@ export const lightTheme: Theme = {
   inactiveDot: palette.magenta,
 
   dynamicLogo: palette.magenta,
+  dynamicIconBG: palette.gray5,
+  dynamicIconBorder: palette.gray,
+  dynamicIconLogo: palette.black,
 };
 
 export const darkTheme: Theme = {
@@ -72,6 +79,9 @@ export const darkTheme: Theme = {
   inactiveDot: palette.white,
 
   dynamicLogo: palette.white,
+  dynamicIconBG: palette.darkBlue4,
+  dynamicIconBorder: palette.darkBlue8,
+  dynamicIconLogo: palette.white,
 };
 
 export const colors = { palette, lightTheme, darkTheme };
