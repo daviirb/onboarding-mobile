@@ -1,15 +1,15 @@
 import * as React from "react";
+import { TouchableOpacity } from "react-native";
 import { SvgXml } from "react-native-svg";
 
 interface LogoProps {
-  width: number;
-  height: number;
+  size: number;
   color: string;
   border: string;
 }
-export default function Google({ width, height, color, border }: LogoProps) {
+export default function Google({ size, color, border }: LogoProps) {
   const xml = `
-  <svg width="${width}" height="${height}" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="${size}" height="${size}" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="1.46112" y="1.5" width="45.3593" height="45.3593" rx="11" fill="${color}" stroke="${border}" stroke-width="2"/>
 <g clip-path="url(#clip0_2016_192)">
 <g clip-path="url(#clip1_2016_192)">
@@ -30,5 +30,9 @@ export default function Google({ width, height, color, border }: LogoProps) {
 </svg>
     `;
 
-  return <SvgXml xml={xml} />;
+  return (
+    <TouchableOpacity>
+      <SvgXml xml={xml} />
+    </TouchableOpacity>
+  );
 }

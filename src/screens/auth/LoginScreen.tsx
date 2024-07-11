@@ -42,20 +42,17 @@ export function LoginScreen() {
             >
               <Google
                 color={dynamicIcon.backgroundColor}
-                height={48}
-                width={48}
+                size={48}
                 border={dynamicIcon.color}
               />
               <Facebook
                 color={dynamicIcon.backgroundColor}
-                height={48}
-                width={48}
+                size={48}
                 border={dynamicIcon.color}
               />
               <Apple
                 color={dynamicIcon.backgroundColor}
-                height={48}
-                width={48}
+                size={48}
                 border={dynamicIcon.color}
                 logo={dynamicIcon.tintColor}
               />
