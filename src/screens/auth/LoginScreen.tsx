@@ -1,4 +1,4 @@
-import { SecondaryButton } from "@/components/Button/SecondaryButton";
+import { Button } from "@/components/Button/Button";
 import { Input } from "@/components/Input/Input";
 import Logo from "@/components/logo";
 import { useDynamicStyles } from "@/styles/styles";
@@ -18,7 +18,7 @@ export function LoginScreen() {
           <Text style={paragraphTertiary}>Phone Number</Text>
           <View style={{ rowGap: 20 }}>
             <Input placeholder="Phone Number" />
-            <SecondaryButton onPress={() => {}} text="Sign In" />
+            <Button.SecondaryButton onPress={() => {}} text="Sign In" />
           </View>
           <View style={{ paddingHorizontal: 40 }}>
             <Text
@@ -39,6 +39,7 @@ export function LoginScreen() {
               <Text>Facebook</Text>
               <Text>Apple</Text>
             </View>
+            <View style={{ padding: 10 }}></View>
           </View>
         </View>
       </View>

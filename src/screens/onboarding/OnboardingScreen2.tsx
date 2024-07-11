@@ -1,5 +1,4 @@
-import { NextScreen } from "@/components/Button/NextScreen";
-import { SkipButton } from "@/components/Button/SkipButton";
+import { Button } from "@/components/Button/Button";
 import { Circle } from "@/components/Elipse/Elipse";
 import { PaginationDots } from "@/components/PaginationDots/PaginationDots";
 import { ViewContainer } from "@/components/Screen/ScreenContainer";
@@ -20,7 +19,9 @@ export function OnboardingScreen2() {
         <Circle color={colors.palette.lightBlue} size={16} />
       </View>
       <View style={{ position: "absolute", top: 17.31, right: 14 }}>
-        <SkipButton onPress={() => navigation.navigate("OnboardingScreen3")} />
+        <Button.SkipButton
+          onPress={() => navigation.navigate("OnboardingScreen3")}
+        />
       </View>
       <View style={{ width: "100%" }}>
         <Image
@@ -43,7 +44,9 @@ export function OnboardingScreen2() {
         visual."
           />
         </View>
-        <NextScreen onPress={() => navigation.navigate("OnboardingScreen3")} />
+        <Button.NextScreen
+          onPress={() => navigation.navigate("OnboardingScreen3")}
+        />
       </View>
     </ViewContainer>
   );

@@ -1,4 +1,4 @@
-import { PrimaryButton } from "@/components/Button/PrimaryButton";
+import { Button } from "@/components/Button/Button";
 import { Circle } from "@/components/Elipse/Elipse";
 import { PaginationDots } from "@/components/PaginationDots/PaginationDots";
 import { ViewContainer } from "@/components/Screen/ScreenContainer";
@@ -40,7 +40,7 @@ export function OnboardingScreen3() {
         visual."
           />
         </View>
-        <PrimaryButton
+        <Button.PrimaryButton
           text="Get Started"
           onPress={async () => {
             await completeOnboarding();
