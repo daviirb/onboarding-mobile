@@ -2,7 +2,7 @@ import { useDynamicStyles } from "@/styles/styles";
 import { colors } from "@/theme/colors";
 import { AntDesign } from "@expo/vector-icons";
 import { TouchableOpacity, View } from "react-native";
-import { Text } from "../Text/Text";
+import { TextComponent } from "../Text/Text";
 
 interface ButtonProps {
   text: string;
@@ -14,7 +14,7 @@ function PrimaryButton({ text, onPress }: ButtonProps) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={primaruButton}>
-        <Text.ButtonText text={text} />
+        <TextComponent.ButtonText text={text} />
       </View>
     </TouchableOpacity>
   );
@@ -25,7 +25,7 @@ function SecondaryButton({ text, onPress }: ButtonProps) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={secondaryButton}>
-        <Text.ButtonText text={text} />
+        <TextComponent.ButtonText text={text} />
       </View>
     </TouchableOpacity>
   );
@@ -51,7 +51,7 @@ function SkipButton({ onPress }: NextButtonProps) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={skipButton}>
-        <Text.Tertiary text="Skip" />
+        <TextComponent.Tertiary text="Skip" />
       </View>
     </TouchableOpacity>
   );

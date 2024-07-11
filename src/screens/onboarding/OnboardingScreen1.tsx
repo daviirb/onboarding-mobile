@@ -2,7 +2,7 @@ import { Button } from "@/components/Button/Button";
 import { Circle } from "@/components/Elipse/Elipse";
 import { PaginationDots } from "@/components/PaginationDots/PaginationDots";
 import { ViewContainer } from "@/components/Screen/ScreenContainer";
-import { Text } from "@/components/Text/Text";
+import { TextComponent } from "@/components/Text/Text";
 import { colors } from "@/theme/colors";
 import { useNavigation } from "@react-navigation/native";
 import { Image, View } from "react-native";
@@ -37,9 +37,9 @@ export function OnboardingScreen1() {
         <PaginationDots isActive={1} />
         <View style={{ paddingHorizontal: 24 }}>
           <View style={{ paddingHorizontal: 48 }}>
-            <Text.TitleLarge text="Beauty parlour at your home" />
+            <TextComponent.TitleLarge text="Beauty parlour at your home" />
           </View>
-          <Text.Paragraph
+          <TextComponent.Paragraph
             text="Lorem ipsum is a placeholder text commonly used to demonstrate the
         visual."
           />

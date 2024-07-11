@@ -23,4 +23,4 @@ function Tertiary({ text }: TextProps) {
   return <RText style={paragraphSecondary}>{text}</RText>;
 }
 
-export const Text = { TitleLarge, Paragraph, Tertiary, ButtonText };
+export const TextComponent = { TitleLarge, Paragraph, Tertiary, ButtonText };
