@@ -17,6 +17,7 @@ export function OnboardingStack() {
       screenOptions={{
         headerShown: false,
         fullScreenGestureEnabled: true,
+        animation: "none",
       }}
       initialRouteName="OnboardingScreen1"
     >

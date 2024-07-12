@@ -15,6 +15,7 @@ export function AuthStack() {
       screenOptions={{
         headerShown: false,
         fullScreenGestureEnabled: true,
+        animation: "none",
       }}
       initialRouteName="LoginScreen"
     >
