@@ -1,3 +1,4 @@
+import { colors } from "@/theme/colors";
 import { useTheme } from "@/theme/ThemeContext";
 import { StyleSheet } from "react-native";
 
@@ -10,6 +11,12 @@ export function useDynamicStyles() {
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: theme.background,
+    },
+    containerSplash: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: theme.splashBackground,
     },
     primaryButton: {
       width: 166,
@@ -97,6 +104,13 @@ export function useDynamicStyles() {
       gap: 10,
       color: theme.placeholderTextColor,
       backgroundColor: theme.inputText,
+    },
+    primaryButtonText: {
+      fontSize: 15,
+      color: colors.palette.white,
+      lineHeight: 24,
+      fontWeight: "700",
+      textAlign: "center",
     },
     buttonText: {
       fontSize: 15,

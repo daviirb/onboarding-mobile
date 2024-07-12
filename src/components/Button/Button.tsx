@@ -10,10 +10,10 @@ interface ButtonProps {
 }
 
 function PrimaryButton({ text, onPress }: ButtonProps) {
-  const { primaryButton: primaruButton } = useDynamicStyles();
+  const { primaryButton } = useDynamicStyles();
   return (
     <TouchableOpacity onPress={onPress}>
-      <View style={primaruButton}>
+      <View style={primaryButton}>
         <TextComponent.ButtonText text={text} />
       </View>
     </TouchableOpacity>
@@ -25,7 +25,7 @@ function SecondaryButton({ text, onPress }: ButtonProps) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={secondaryButton}>
-        <TextComponent.ButtonText text={text} />
+        <TextComponent.PrimaryButtonText text={text} />
       </View>
     </TouchableOpacity>
   );
@@ -35,7 +35,7 @@ function TertiaryButton({ text, onPress }: ButtonProps) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={TertiaryButton}>
-        <TextComponent.ButtonText text={text} />
+        <TextComponent.PrimaryButtonText text={text} />
       </View>
     </TouchableOpacity>
   );

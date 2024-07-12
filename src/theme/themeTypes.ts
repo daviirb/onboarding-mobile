@@ -41,4 +41,5 @@ export interface Theme extends Palette {
   dynamicIconBorder: string;
   dynamicIconLogo: string;
   textNeutral: string;
+  splashBackground: string;
 }

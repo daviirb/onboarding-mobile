@@ -15,6 +15,10 @@ function Paragraph({ text }: TextProps) {
   return <RText style={paragraph}>{text}</RText>;
 }
 function ButtonText({ text }: TextProps) {
+  const { primaryButtonText } = useDynamicStyles();
+  return <RText style={primaryButtonText}>{text}</RText>;
+}
+function PrimaryButtonText({ text }: TextProps) {
   const { buttonText } = useDynamicStyles();
   return <RText style={buttonText}>{text}</RText>;
 }
@@ -23,4 +27,10 @@ function Tertiary({ text }: TextProps) {
   return <RText style={paragraphSecondary}>{text}</RText>;
 }
 
-export const TextComponent = { TitleLarge, Paragraph, Tertiary, ButtonText };
+export const TextComponent = {
+  TitleLarge,
+  Paragraph,
+  Tertiary,
+  ButtonText,
+  PrimaryButtonText,
+};

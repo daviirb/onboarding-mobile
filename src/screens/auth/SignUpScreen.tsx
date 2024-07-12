@@ -79,7 +79,7 @@ export function SignUpScreen() {
                     Already have an Account?{" "}
                   </Text>
                   <TouchableOpacity
-                    onPress={() => navigation.navigate("SignUpScreen")}
+                    onPress={() => navigation.navigate("LoginScreen")}
                   >
                     <Text style={paragraphPrimary}>Sign In</Text>
                   </TouchableOpacity>

@@ -44,6 +44,7 @@ export const lightTheme: Theme = {
   buttonTertiary: palette.gray3,
 
   background: palette.white,
+  splashBackground: palette.magenta,
 
   icon: palette.green,
   iconSecondary: palette.gray,
@@ -74,6 +75,7 @@ export const darkTheme: Theme = {
   buttonTertiary: palette.darkBlue6,
 
   background: palette.darkBlue,
+  splashBackground: palette.darkBlue,
 
   icon: palette.green,
   iconSecondary: palette.darkBlue6,
