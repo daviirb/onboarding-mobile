@@ -105,6 +105,9 @@ export function useDynamicStyles() {
       color: theme.placeholderTextColor,
       backgroundColor: theme.inputText,
     },
+    errorText: {
+      color: theme.textSecondary,
+    },
     primaryButtonText: {
       fontSize: 15,
       color: colors.palette.white,

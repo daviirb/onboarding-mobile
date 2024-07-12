@@ -5,7 +5,9 @@ import Google from "@/components/Icons/Google";
 import { Input } from "@/components/Input/Input";
 import Logo from "@/components/Logo/Logo";
 import { useDynamicStyles } from "@/styles/styles";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigation } from "@react-navigation/native";
+import { Controller, useForm } from "react-hook-form";
 import {
   KeyboardAvoidingView,
   Platform,
@@ -13,8 +15,22 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import * as Yup from "yup";
 
-export function LoginScreen() {
+interface SignInFormData {
+  phoneNumber: string;
+}
+
+const validationSchema = Yup.object().shape({
+  phoneNumber: Yup.string()
+    .required("Phone Number is required")
+    .matches(/^[0-9]+$/, "Phone Number must be only digits")
+    .min(10, "Phone Number must be at least 10 digits"),
+});
+
+export function SignInScreen() {
+  const navigation = useNavigation();
+
   const {
     container,
     title,
@@ -24,7 +40,19 @@ export function LoginScreen() {
     paragraphNeutral,
     paragraphPrimary,
   } = useDynamicStyles();
-  const navigation = useNavigation();
+
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<SignInFormData>({
+    resolver: yupResolver(validationSchema),
+  });
+
+  const onSubmit = (data: SignInFormData) => {
+    console.log(data);
+  };
+
   return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
@@ -39,8 +67,23 @@ export function LoginScreen() {
           <View style={{ rowGap: 6 }}>
             <Text style={paragraphTertiary}>Phone Number</Text>
             <View style={{ rowGap: 20 }}>
-              <Input placeholder="Phone Number" />
-              <Button.SecondaryButton onPress={() => {}} text="Sign In" />
+              <Controller
+                control={control}
+                name="phoneNumber"
+                render={({ field: { onChange, onBlur, value } }) => (
+                  <Input
+                    placeholder="Phone Number"
+                    onBlur={onBlur}
+                    onChangeText={onChange}
+                    value={value}
+                    errorMessage={errors.phoneNumber?.message}
+                  />
+                )}
+              />
+              <Button.SecondaryButton
+                onPress={handleSubmit(onSubmit)}
+                text="Sign In"
+              />
             </View>
             <View style={{ paddingHorizontal: 40 }}>
               <Text
