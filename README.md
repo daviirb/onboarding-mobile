@@ -1,5 +1,9 @@
 # Teste Prático - Guató
 
+## Demonstração
+
+https://github.com/user-attachments/assets/b09d8419-fead-4902-bd5c-2fffef0111bb
+
 #### Os requisitos deste aplicativo são:
 
 - O aplicativo deve ser desenvolvido utilizando Expo.
@@ -47,3 +51,7 @@ Eu decidi implementar algumas melhorias que identifiquei no Figma, visando a mel
 - Os icones (Apple, Google e Facebook) eu componentizei, bem como a logo. Sendo assim, não precisei salvar diversas imagens e fazer uma logica muito grande para trocar a imagem de acordo com o tema, ele simplesmente troca as cores das propriedades do SVG do componente icone e logo.
 
 - Alterei a imagem da SplashScreen, colocando o fundo da imagem como transparente, caso no futuro escolha trocar a cor do fundo da SplashScreen, basta alterar no app.json
+
+
+
+
