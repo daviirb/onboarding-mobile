@@ -30,6 +30,16 @@ function SecondaryButton({ text, onPress }: ButtonProps) {
     </TouchableOpacity>
   );
 }
+function TertiaryButton({ text, onPress }: ButtonProps) {
+  const { TertiaryButton } = useDynamicStyles();
+  return (
+    <TouchableOpacity onPress={onPress}>
+      <View style={TertiaryButton}>
+        <TextComponent.ButtonText text={text} />
+      </View>
+    </TouchableOpacity>
+  );
+}
 
 interface NextButtonProps {
   onPress: () => void;
@@ -60,6 +70,7 @@ function SkipButton({ onPress }: NextButtonProps) {
 export const Button = {
   PrimaryButton,
   SecondaryButton,
+  TertiaryButton,
   NextScreen,
   SkipButton,
 };
