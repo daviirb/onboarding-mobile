@@ -27,6 +27,15 @@ export function useDynamicStyles() {
       backgroundColor: theme.buttonSecondary,
       gap: 10,
     },
+    TertiaryButton: {
+      width: "100%",
+      borderRadius: 8,
+      paddingHorizontal: 22,
+      paddingVertical: 12,
+      borderWidth: 1,
+      borderColor: theme.dynamicIconBorder,
+      backgroundColor: theme.dynamicIconBG,
+    },
     titleLarge: {
       fontSize: 32,
       color: theme.text,
@@ -66,6 +75,21 @@ export function useDynamicStyles() {
       lineHeight: 24,
       fontWeight: "600",
     },
+    paragraphNeutral: {
+      fontSize: 12,
+      color: theme.textNeutral,
+      lineHeight: 16,
+      fontWeight: "700",
+      textAlign: "center",
+    },
+    paragraphPrimary: {
+      fontSize: 12,
+      color: theme.primary,
+      lineHeight: 16,
+      fontWeight: "700",
+      textAlign: "center",
+    },
+
     inputText: {
       width: "100%",
       borderRadius: 8,

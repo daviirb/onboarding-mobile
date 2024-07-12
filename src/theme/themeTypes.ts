@@ -6,6 +6,7 @@ export interface Palette {
   gray3: string;
   gray4: string;
   gray5: string;
+  gray6: string;
   lightBlue: string;
   darkBlue: string;
   darkBlue2: string;
@@ -39,4 +40,5 @@ export interface Theme extends Palette {
   dynamicIconBG: string;
   dynamicIconBorder: string;
   dynamicIconLogo: string;
+  textNeutral: string;
 }
