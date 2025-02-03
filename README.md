@@ -1,4 +1,4 @@
-# Teste Prático - Guató
+# Onboarding 
 
 ## Demonstração
 
@@ -18,7 +18,7 @@ https://github.com/user-attachments/assets/b09d8419-fead-4902-bd5c-2fffef0111bb
 
 #
 
-#### Para a realização desse teste eu fiz as seguintes escolhas:
+#### Para a realização desse projeto eu fiz as seguintes escolhas:
 
 - A estilização foi feita usando o Stylesheet;
 - Os inputs contem validações usando React Hook Form e yup;
